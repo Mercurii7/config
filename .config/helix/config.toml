@@ -16,3 +16,4 @@ enable = true
 true-color = true
 mouse = false
 line-number = "relative"
+bufferline = "always"
