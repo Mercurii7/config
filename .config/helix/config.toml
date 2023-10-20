@@ -15,3 +15,4 @@ enable = true
 [editor]
 true-color = true
 mouse = false
+line-number = "relative"
