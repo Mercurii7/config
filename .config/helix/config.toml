@@ -22,3 +22,4 @@ enable = true
 [editor]
 true-color = true
 mouse = false
+auto-format = true
