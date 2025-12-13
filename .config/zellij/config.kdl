@@ -112,7 +112,7 @@ keybinds {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl Space" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
         bind "w" {
@@ -205,7 +205,8 @@ keybinds {
         bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl o" { SwitchToMode "Session"; }
+        unbind "Ctrl o" // unbind in all modes
+        bind "Ctrl Space" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
         bind "Ctrl t" { SwitchToMode "Tab"; }
@@ -224,7 +225,10 @@ plugins {
     tab-bar location="zellij:tab-bar"
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
-    compact-bar location="zellij:compact-bar"
+    //compact-bar location="zellij:compact-bar"
+    compact-bar location="zellij:compact-bar" {
+      tooltip "F1"
+    }
     session-manager location="zellij:session-manager"
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
@@ -273,7 +277,7 @@ load_plugins {
 //   - true (default)
 //   - false
 //
-// pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -334,7 +338,7 @@ load_plugins {
 // Default: "default"
 // (Requires restart)
 //
-// default_layout "compact"
+default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
