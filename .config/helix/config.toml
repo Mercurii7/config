@@ -24,8 +24,12 @@ enable = true
 [editor]
 true-color = true
 mouse = false
+<<<<<<< HEAD
 line-number = "relative"
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "error"
+=======
+auto-format = true
+>>>>>>> 7b87ce6c0cca5a910115cd94640810ade1bc9f99

@@ -35,4 +35,3 @@ name = "dart"
 formatter = { command = "dart", args = ["format"] }
 # Optional: enable auto-formatting on save
 auto-format = true
-
